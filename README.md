@@ -8,7 +8,7 @@ This repository contains the implementation of the following paper:
 
 ## :open_book: Overview
 <!-- ![overall_structure](.figure8800.png) -->
-<img src="./figure8800.png" width="100%">
+<img src="./figure.png" width="100%">
 
 We propose **Anonymize-Anyone**, 
 
