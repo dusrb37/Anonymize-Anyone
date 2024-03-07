@@ -8,7 +8,6 @@ We propose **Anonymize-Anyone**, where users can use multiple modalities to cont
     *(b) Face Editing*. Collaborative Diffusion also supports multi-modal editing of real images with promising identity preservation capability.
 
 <br>
-<img src="./assets/fig_framework.jpg" width="100%">
 
 We use pre-trained uni-modal diffusion models to perform multi-modal guided face generation and editing. At each step of the reverse process (i.e., from timestep t to t − 1), the **dynamic diffuser** predicts the spatial-varying and temporal-varying **influence function** to *selectively enhance or suppress the contributions of the given modality*.
 
