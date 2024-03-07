@@ -7,8 +7,6 @@ We propose **Anonymize-Anyone**,
 
 <br>
 
-We use pre-trained uni-modal diffusion models to perform multi-modal guided face generation and editing. At each step of the reverse process (i.e., from timestep t to t − 1), the **dynamic diffuser** predicts the spatial-varying and temporal-varying **influence function** to *selectively enhance or suppress the contributions of the given modality*.
-
 ## :heavy_check_mark: Updates
 - [03/2024] ...
 
