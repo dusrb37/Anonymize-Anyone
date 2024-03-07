@@ -3,9 +3,7 @@ Anonymize Anyone: Bridging Ethnic Fairness in Text-to-Face Synthesis using a Dif
 
 This repository contains the implementation of the following paper:
 
-We propose **Anonymize-Anyone**, where users can use multiple modalities to control face generation and editing.
-    *(a) Face Generation*. Given multi-modal controls, our framework synthesizes high-quality images consistent with the input conditions.
-    *(b) Face Editing*. Collaborative Diffusion also supports multi-modal editing of real images with promising identity preservation capability.
+We propose **Anonymize-Anyone**, 
 
 <br>
 
