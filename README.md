@@ -40,8 +40,56 @@ Find the output in `./test/anonymized`
 
 <be>
 
+## :hammer: Get the Source Mask
+
+### 1. Get segmentation mask
+
+```bash
+python test_RGB.py
+```
+Check the pre-trained model in `./segmentation/RGB/model/Retina_model.pth`
+Find the output in `./segmentation/RGB/RGB_mask`
+
+Please set the code environment by referring to the GitHub link below.
+
+Detectron2 -> https://github.com/facebookresearch/detectron2
+
+Install guide -> https://detectron2.readthedocs.io/en/latest/tutorials/install.html
 
 
+### 2. Convert to binary mask
+```bash
+python convert_binary.py
+```
+Find the output in `./segmentation/RGB/binary_mask`
+
+<be>
+
+
+## :hammer: Train
+
+### 1. Fine-tuning for inpainting model
+
+```bash
+python test_RGB.py
+```
+Check the pre-trained model in `./segmentation/RGB/model/Retina_model.pth`
+Find the output in `./segmentation/RGB/RGB_mask`
+
+Please set the code environment by referring to the GitHub link below.
+
+Detectron2 -> https://github.com/facebookresearch/detectron2
+
+Install guide -> https://detectron2.readthedocs.io/en/latest/tutorials/install.html
+
+
+### 2. Convert to binary mask
+```bash
+python convert_binary.py
+```
+Find the output in `./segmentation/RGB/binary_mask`
+
+<be>
 1. Clone repo
 
    ```
