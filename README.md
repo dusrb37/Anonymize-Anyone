@@ -5,13 +5,10 @@ This repository contains the implementation of the following paper:
 
 
 <be>
+ 
 ## :open_book: Overview
 <!-- ![overall_structure](.figure8800.png) -->
 <img src="./ForGit800.png" width="100%">
-   
-## :open_book: Overview
-<!-- ![overall_structure](.figure8800.png) -->
-<img src="./figure.png" width="100%">
 
 We propose **Anonymize-Anyone**, 
 
