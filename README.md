@@ -19,7 +19,28 @@ We propose **Anonymize-Anyone**,
 - [03/2024] ...
 
 
-## :hammer: Installation
+## :hammer: Setup
+
+### 1. Environment
+
+```bash
+conda create -n anonymize python=3.10.13
+conda activate anonymize
+
+git clone https://github.com/dusrb37/Anonymize-Anyone.git
+cd Anonymize-Anyone
+pip install -r requirements.txt
+```
+
+### 2. Run example
+```bash
+python test.py
+```
+Find the output in `./test/anonymized`
+
+<be>
+
+
 
 1. Clone repo
 
