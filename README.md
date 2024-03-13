@@ -51,6 +51,8 @@ Find the output in `./test/anonymized`
 
 ### 1. segmentation mask
 
+Please set the environment by referring to the GitHub link. [Install guide](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) , [Detectron2](https://github.com/facebookresearch/detectron2)
+
 ```bash
 python test_RGB.py
 ```
@@ -58,7 +60,6 @@ Check the pre-trained model in `./segmentation/RGB/model/Retina_model.pth`
 
 Find the output in `./segmentation/RGB/RGB_mask`
 
-Please set the code environment by referring to the GitHub link. [Install guide](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) , [Detectron2](https://github.com/facebookresearch/detectron2)
 
 
 ### 2. Convert to binary mask
