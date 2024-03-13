@@ -15,7 +15,7 @@ This repository contains the implementation of the following paper:
 <!-- ![overall_structure](.forgit2800.png) -->
 <img src="./forgit2800.png" width="100%">
 
-We propose **Anonymize Anyone**, a text-to-face synthesis using a Diffusion Model that considers Race Fairness.where users can use multiple modalities to control face generation and editing.
+We propose **Anonymize Anyone**, a text-to-face synthesis using a Diffusion Model that considers Race Fairness.
 	(a) We used the facial mask from the facial segmentation model to prompt editing in specific facial regions. 
 	(b) The Stable Diffusion v2 inpainting model used as our baseline, trained on the Asian dataset, and we applied ℒ𝐹𝐹𝐸 to enhance erformance even with limited data. Additionally, we used ℒ𝑑𝑖𝑓𝑓 to address the cata strophic forgetting issue of the pre-trained model. Finally, we employed a pre-trained model trained with direct preference optimization (DPO) to produce more enhanced images. 
 
