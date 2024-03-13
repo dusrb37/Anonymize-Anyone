@@ -7,13 +7,13 @@ This repository contains the implementation of the following paper:
 <be>
  
 ## :open_book: Overview
-<!-- ![overall_structure](.figure8800.png) -->
+<!-- ![overall_structure](.Fig1.png) -->
 <img src="./assets/Fig1.png" width="100%">
 
 **Anonymize Anyone** presents example results of anonymized Asian images. 
 
-<!-- ![overall_structure](.forgit2800.png) -->
-<img src="./forgit2800.png" width="100%">
+<!-- ![overall_structure](.Fig2.png) -->
+<img src="./assets/Fig2.png" width="100%">
 
 We propose **Anonymize Anyone**, a text-to-face synthesis using a Diffusion Model that considers Race Fairness.
 	(a) We used the facial mask from the facial segmentation model to prompt editing in specific facial regions. 
