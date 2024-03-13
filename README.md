@@ -1,5 +1,5 @@
 # Anonymize-Anyone
-Anonymize Anyone: Bridging Ethnic Fairness in Text-to-Face Synthesis using a Diffusion Model
+Anonymize Anyone: Toward Race Fairness in Text-to-Face Synthesis using a Diffusion Model
 
 This repository contains the implementation of the following paper:
 
@@ -138,7 +138,7 @@ Please refer to the original [code base repository](https://github.com/Salesforc
 
 <be>
 
-## ✈️: Inference
+## ✈️ Inference
 
 To inference your dataset, change the path of the image and mask.
 ```bash
@@ -147,7 +147,7 @@ python inference.py
 <be>
 
 
-## 🖊️: Citation
+## 🖊️ Citation
 
    If you find our repo useful for your research, please consider citing our paper:
 
@@ -155,8 +155,8 @@ python inference.py
    
    ```
    
-## ❤️: Acknowledgement
+## ❤️ Acknowledgement
 
 We thank the authors for their great work. 
-- We were heavily inspired by [DreamBooth](https://arxiv.org/abs/2208.12242) for how train effectively with a small dataset and [DidffusionDPO](https://arxiv.org/abs/2311.12908) for how optimize human preferences into diffusion model.
+- We were heavily inspired by [DreamBooth](https://arxiv.org/abs/2208.12242) for how train effectively with a small dataset and [DiffusionDPO](https://arxiv.org/abs/2311.12908) for how optimize human preferences into diffusion model.
 - Our training pipeline was modified from the [the diffusers library](https://github.com/huggingface/diffusers).
