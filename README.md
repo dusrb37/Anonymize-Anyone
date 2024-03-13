@@ -8,7 +8,7 @@ This repository contains the implementation of the following paper:
  
 ## :open_book: Overview
 <!-- ![overall_structure](.figure8800.png) -->
-<img src="./ForGit800.png" width="100%">
+<img src="./assets/Fig1.png" width="100%">
 
 **Anonymize Anyone** presents example results of anonymized Asian images. 
 
