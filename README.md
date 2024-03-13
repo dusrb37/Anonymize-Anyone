@@ -13,7 +13,7 @@ This repository contains the implementation of the following paper:
 **Anonymize Anyone** presents example results of anonymized Asian images. 
 
 <!-- ![overall_structure](.forgit2800.png) -->
-<img src="./ForGit800.png" width="100%">
+<img src="./forgit2800.png" width="100%">
 
 We propose **Anonymize Anyone**, a text-to-face synthesis using a Diffusion Model that considers Race Fairness.where users can use multiple modalities to control face generation and editing.
 	(a) We used the facial mask from the facial segmentation model to prompt editing in specific facial regions. 
