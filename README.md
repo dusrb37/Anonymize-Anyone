@@ -50,11 +50,7 @@ python test_RGB.py
 Check the pre-trained model in `./segmentation/RGB/model/Retina_model.pth`
 Find the output in `./segmentation/RGB/RGB_mask`
 
-Please set the code environment by referring to the GitHub link below.
-
-Detectron2 -> https://github.com/facebookresearch/detectron2
-
-Install guide -> https://detectron2.readthedocs.io/en/latest/tutorials/install.html
+Please set the code environment by referring to the GitHub link. [Install guide](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) , [Detectron2](https://github.com/facebookresearch/detectron2)
 
 
 ### 2. Convert to binary mask
@@ -113,15 +109,15 @@ accelerate launch train_anonymize_inpaint.py \
 - `--DIFFERENCE_DIR` path-for difference images
 - `--output_dir` where to save/log to
 - `--instance_prompt` prompt that you want to train
-- `--train_text_encoder` Fine-tuning `text_encoder` with `unet` can give much better results, especially for faces.
+- `--train_text_encoder` Fine-tuning `text_encoder` with `unet` can give much better results, especially for faces
 
 ##### Loss
 
 - `--ffel_weight` Focused Feature Enhancement Loss
-- `--threshold` Parameter for critical feature mask, It is recommended to experiment by adjusting it up or down from 0.5.
+- `--threshold` Parameter for critical feature mask, It is recommended to experiment by adjusting it up or down from 0.5
 - `--with_difference_loss` Difference Loss
 - `--difference_prompt` prompt that you want to preserve
-- `--num_difference_images` Number of generating images for difference prompt, 200-300 worked well for our cases.
+- `--num_difference_images` Number of generating images for difference prompt, 200-300 worked well for our cases
 
 
 ### 2. Train for DPO
