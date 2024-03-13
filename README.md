@@ -17,7 +17,7 @@ This repository contains the implementation of the following paper:
 
 We propose **Anonymize Anyone**, a text-to-face synthesis using a Diffusion Model that considers Race Fairness.
 	(a) We used the facial mask from the facial segmentation model to prompt editing in specific facial regions. 
-	(b) The Stable Diffusion v2 inpainting model used as our baseline, trained on the Asian dataset, and we applied ℒ𝐹𝐹𝐸 to enhance erformance even with limited data. Additionally, we used ℒ𝑑𝑖𝑓𝑓 to address the cata strophic forgetting issue of the pre-trained model. Finally, we employed a pre-trained model trained with direct preference optimization (DPO) to produce more enhanced images. 
+	(b) The Stable Diffusion v2 inpainting model used as our baseline, trained on the Asian dataset, and we applied **ℒ𝐹𝐹𝐸**(Focused Feature Enhancement Loss) to enhance erformance even with limited data. Additionally, we used **ℒ𝑑𝑖𝑓𝑓**(Difference Loss) to address the cata strophic forgetting issue of the pre-trained model. Finally, we employed a pre-trained model trained with direct preference optimization (DPO) to produce more enhanced images. 
 
 <br>
 
@@ -54,11 +54,11 @@ Find the output in `./test/anonymized`
 Please set the environment by referring to the GitHub link. [Install guide](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) , [Detectron2](https://github.com/facebookresearch/detectron2)
 
 ```bash
-python test_RGB.py
+python test_face_segment.py
 ```
-Check the pre-trained model in `./segmentation/RGB/model/Retina_model.pth`
+Check the pre-trained model in `./segmentation/model/Retina_model.pth`
 
-Find the output in `./segmentation/RGB/RGB_mask`
+Find the output in `./segmentation/mask`
 
 
 
@@ -146,15 +146,6 @@ To inference your dataset, change the path of the image and mask.
 python inference.py
 ```
 <be>
-
-
-## 🖊️ Citation
-
-   If you find our repo useful for your research, please consider citing our paper:
-
-   ```
-   
-   ```
    
 ## ❤️ Acknowledgement
 
