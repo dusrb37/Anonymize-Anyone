@@ -42,7 +42,7 @@ Find the output in `./test/anonymized`
 
 ## :hammer: Get the Source Mask
 
-### 1. Get segmentation mask
+### 1. segmentation mask
 
 ```bash
 python test_RGB.py
@@ -68,47 +68,83 @@ Find the output in `./segmentation/RGB/binary_mask`
 
 ## :hammer: Train
 
-### 1. Fine-tuning for inpainting model
+### 1. Train for the inpainting model
+#### Training with Focused Feature Enhancement Loss & Difference Loss
+
+'Focused Feature Enhancement Loss' is used to effectively learn detailed areas. 'Difference Loss' enables the model to distinguish between the two classes (e.g. Asians and Caucasians) and preserve their respective. For difference loss, we first generate images using the model with a difference prompt and then use those during training along with our data. Refer to the paper to learn more about it.
+
+___Note: It needs at least 24GB VRAM.___
+
 
 ```bash
-python test_RGB.py
+export MODEL_NAME="stabilityai/stable-diffusion-2-inpainting"
+export INSTANCE_DIR="path-to-instance-images"
+export DIFFERENCE_DIR="path-to-difference-images"
+export OUTPUT_DIR="path-to-save-model"
+
+accelerate launch train_anonymize_inpaint.py \
+  --pretrained_model_name_or_path=$MODEL_NAME  \
+  --train_text_encoder \
+  --instance_data_dir=$INSTANCE_DIR \
+  --difference_data_dir=$DIFFERENCE_DIR \
+  --output_dir=$OUTPUT_DIR \
+  --ffel_weight=0.01 \
+  --threshold=0.5 \
+  --with_difference_loss \
+  --instance_prompt="a photo of asian" \
+  --difference_prompt="a photo of white man" \
+  --resolution=512 \
+  --train_batch_size=1 \
+  --use_8bit_adam \
+  --gradient_checkpointing \
+  --learning_rate=1e-6 \
+  --lr_scheduler="constant" \
+  --lr_warmup_steps=0 \
+  --num_difference_images=300 \
+  --max_train_steps=10000 \
 ```
-Check the pre-trained model in `./segmentation/RGB/model/Retina_model.pth`
-Find the output in `./segmentation/RGB/RGB_mask`
 
-Please set the code environment by referring to the GitHub link below.
+#### Important Args
 
-Detectron2 -> https://github.com/facebookresearch/detectron2
+##### General
 
-Install guide -> https://detectron2.readthedocs.io/en/latest/tutorials/install.html
+- `--pretrained_model_name_or_path` what model to train/initalize from
+- `--INSTANCE_DIR` path for dataset that you want to train
+- `--DIFFERENCE_DIR` path-for difference images
+- `--output_dir` where to save/log to
+- `--instance_prompt` prompt that you want to train
+- `--train_text_encoder` Fine-tuning `text_encoder` with `unet` can give much better results, especially for faces.
+
+##### Loss
+
+- `--ffel_weight` Focused Feature Enhancement Loss
+- `--threshold` Parameter for critical feature mask, It is recommended to experiment by adjusting it up or down from 0.5.
+- `--with_difference_loss` Difference Loss
+- `--difference_prompt` prompt that you want to preserve
+- `--num_difference_images` Number of generating images for difference prompt, 200-300 worked well for our cases.
 
 
-### 2. Convert to binary mask
+### 2. Train for DPO
+
+Run the shell script below for training DPO. 
+Please refer to the original [code base repository](https://github.com/SalesforceAIResearch/DiffusionDPO) and change the settings accordingly. We used [pre-trained model](https://huggingface.co/radames/sd-21-DPO-LoRA) 
 ```bash
-python convert_binary.py
+./tarin_dpo_diffusion.sh
 ```
-Find the output in `./segmentation/RGB/binary_mask`
 
 <be>
-1. Clone repo
 
-   ```
-   
-   ```
+## :hammer: Inference
 
-2. Create conda environment.<br>
-
-   ```
-   
-   ```
-
-3. Install dependencies
-
-   ```
-   
-   ```
+To inference your dataset, change the path of the image and mask.
+```bash
+python inference.py
+```
+<be>
 
 
 ## 💙: Acknowledgement
 
-...
+We thank the authors for their great work. 
+- We were heavily inspired by [DreamBooth](https://arxiv.org/abs/2208.12242) for how train effectively with a small dataset and [DidffusionDPO](https://arxiv.org/abs/2311.12908) for how optimize human preferences into diffusion model.
+- Our training pipeline was modified from the [the diffusers library](https://github.com/huggingface/diffusers).
