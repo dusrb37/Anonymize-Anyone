@@ -54,7 +54,7 @@ Find the output in `./test/anonymized`
 Please set the environment by referring to the GitHub link. [Install guide](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) , [Detectron2](https://github.com/facebookresearch/detectron2)
 
 ```bash
-python ./test_face_segment.py
+python ./segmentation/test_face_segment.py
 ```
 Check the pre-trained model in `./segmentation/model/Retina_model.pth`
 
