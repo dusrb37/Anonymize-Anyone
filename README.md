@@ -17,7 +17,7 @@ This repository contains the implementation of the following paper:
 
 We propose **Anonymize Anyone**, a text-to-face synthesis using a Diffusion Model that considers Race Fairness.
 	(a) We used the facial mask from the facial segmentation model to prompt editing in specific facial regions. 
-	(b) The Stable Diffusion v2 inpainting model used as our baseline, trained on the Asian dataset, and we applied **ℒ𝐹𝐹𝐸**(Focused Feature Enhancement Loss) to enhance erformance even with limited data. Additionally, we used **ℒ𝑑𝑖𝑓𝑓**(Difference Loss) to address the cata strophic forgetting issue of the pre-trained model. Finally, we employed a pre-trained model trained with direct preference optimization (DPO) to produce more enhanced images. 
+	(b) The Stable Diffusion v2 inpainting model used as our baseline, trained on the Asian dataset, and we applied **ℒ𝐹𝐹𝐸**(Focused Feature Enhancement Loss) to enhance performance even with limited data. Additionally, we used **ℒ𝑑𝑖𝑓𝑓**(Difference Loss) to address the catastrophic forgetting issue of the pre-trained model. Finally, we employed a pre-trained model trained with direct preference optimization (DPO) to produce more enhanced images. 
 
 <br>
 
@@ -54,19 +54,17 @@ Find the output in `./test/anonymized`
 Please set the environment by referring to the GitHub link. [Install guide](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) , [Detectron2](https://github.com/facebookresearch/detectron2)
 
 ```bash
-python test_face_segment.py
+python ./segmentation/test_face_segment.py
 ```
 Check the pre-trained model in `./segmentation/model/Retina_model.pth`
 
-Find the output in `./segmentation/mask`
+Find the output in `./segmentation/output`
 
 
 
 ### 2. Convert to binary mask
-```bash
-python convert_binary.py
-```
-Find the output in `./segmentation/RGB/binary_mask`
+To convert your mask to binary mask use the notebook `./segmentation/convert_binary.ipynb`
+Find the output in `./segmentation/binary_mask`
 
 <be>
 
