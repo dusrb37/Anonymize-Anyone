@@ -23,8 +23,8 @@ We propose **Anonymize Anyone**, a text-to-face synthesis using a Diffusion Mode
 
 
 ## :heavy_check_mark: Updates
-- [03/2024] [Training code] code for Anonymize Anyone released.
-- [03/2024] [Inference code] code for Anonymize Anyone released.
+- [03/2024] [Training code](https://github.com/dusrb37/Anonymize-Anyone) code for Anonymize Anyone released.
+- [03/2024] [Inference code](https://github.com/dusrb37/Anonymize-Anyone) code for Anonymize Anyone released.
 
 ## :hammer: Setup
 
