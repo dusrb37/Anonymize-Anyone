@@ -40,7 +40,7 @@ Find the output in `./test/anonymized`
 
 <be>
 
-## :hammer: Get the Source Mask
+## ⬇️: Get the Source Mask
 
 ### 1. segmentation mask
 
@@ -48,6 +48,7 @@ Find the output in `./test/anonymized`
 python test_RGB.py
 ```
 Check the pre-trained model in `./segmentation/RGB/model/Retina_model.pth`
+
 Find the output in `./segmentation/RGB/RGB_mask`
 
 Please set the code environment by referring to the GitHub link. [Install guide](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) , [Detectron2](https://github.com/facebookresearch/detectron2)
@@ -62,7 +63,7 @@ Find the output in `./segmentation/RGB/binary_mask`
 <be>
 
 
-## :hammer: Train
+## :running_man: Train
 
 ### 1. Train for the inpainting model
 #### **Training with Focused Feature Enhancement Loss & Difference Loss**
@@ -100,9 +101,9 @@ accelerate launch train_anonymize_inpaint.py \
   --max_train_steps=10000 \
 ```
 
-#### **Important Args**
+### **Important Args**
 
-##### **General**
+#### **General**
 
 - `--pretrained_model_name_or_path` what model to train/initalize from
 - `--INSTANCE_DIR` path for dataset that you want to train
@@ -111,7 +112,7 @@ accelerate launch train_anonymize_inpaint.py \
 - `--instance_prompt` prompt that you want to train
 - `--train_text_encoder` Fine-tuning `text_encoder` with `unet` can give much better results, especially for faces
 
-##### **Loss**
+#### **Loss**
 
 - `--ffel_weight` Focused Feature Enhancement Loss
 - `--threshold` Parameter for critical feature mask, It is recommended to experiment by adjusting it up or down from 0.5
@@ -130,7 +131,7 @@ Please refer to the original [code base repository](https://github.com/Salesforc
 
 <be>
 
-## :hammer: Inference
+## ✈️: Inference
 
 To inference your dataset, change the path of the image and mask.
 ```bash
@@ -139,7 +140,15 @@ python inference.py
 <be>
 
 
-## 💙: Acknowledgement
+## 🖊️: Citation
+
+   If you find our repo useful for your research, please consider citing our paper:
+
+   ```
+   
+   ```
+   
+## ❤️: Acknowledgement
 
 We thank the authors for their great work. 
 - We were heavily inspired by [DreamBooth](https://arxiv.org/abs/2208.12242) for how train effectively with a small dataset and [DidffusionDPO](https://arxiv.org/abs/2311.12908) for how optimize human preferences into diffusion model.
