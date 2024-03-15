@@ -30,7 +30,7 @@ Try out our colab demo here [![Open In Colab](https://colab.research.google.com/
 
 ## :hammer: Setup
 
-### 1. Environment
+### Environment
 
 ```bash
 conda create -n anonymize python=3.10.13
@@ -42,12 +42,6 @@ pip install peft
 pip install diffusers
 pip install -r requirements.txt
 ```
-
-### 2. Run example
-```bash
-python test.py
-```
-Find the output in `./test/anonymized`
 
 <be>
 
