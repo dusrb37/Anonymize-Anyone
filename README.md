@@ -139,7 +139,7 @@ Please refer to the original [code base repository](https://github.com/Salesforc
 
 We used [pretrained model](https://huggingface.co/radames/sd-21-DPO-LoRA).
 ```bash
-./tarin_dpo_diffusion.sh
+./tarin_diffusion_dpo.sh
 ```
 
 <be>
