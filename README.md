@@ -22,7 +22,7 @@ We propose **Anonymize Anyone**, a text-to-face synthesis using a Diffusion Mode
 <be>
 
 ## Colab Demo
-Try out our colab demo here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/https://github.com/dusrb37/Anonymize-Anyone/blob/main/demo_anonymize_anyone.ipynb)
+Try out our colab demo here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github.com/dusrb37/Anonymize-Anyone/blob/main/demo_anonymize_anyone.ipynb)
 
 ## :heavy_check_mark: Updates
 - [03/2024] [Training code](https://github.com/dusrb37/Anonymize-Anyone) code for Anonymize Anyone released.
