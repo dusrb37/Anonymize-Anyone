@@ -19,8 +19,10 @@ We propose **Anonymize Anyone**, a text-to-face synthesis using a Diffusion Mode
 	(a) We used the facial mask from the facial segmentation model to prompt editing in specific facial regions. 
 	(b) The Stable Diffusion v2 inpainting model used as our baseline, trained on the Asian dataset, and we applied **ℒ𝐹𝐹𝐸**(Focused Feature Enhancement Loss) to enhance performance even with limited data. Additionally, we used **ℒ𝑑𝑖𝑓𝑓**(Difference Loss) to address the catastrophic forgetting issue of the pre-trained model. Finally, we employed a pre-trained model trained with direct preference optimization (DPO) to produce more enhanced images. 
 
-<br>
+<be>
 
+## Colab Demo
+Try out our colab demo here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/https://github.com/dusrb37/Anonymize-Anyone/blob/main/demo_anonymize_anyone.ipynb)
 
 ## :heavy_check_mark: Updates
 - [03/2024] [Training code](https://github.com/dusrb37/Anonymize-Anyone) code for Anonymize Anyone released.
@@ -149,7 +151,7 @@ bash ./tarin_diffusion_dpo.sh
 ## ✈️ Inference
 ___[Model Checkpoint](https://huggingface.co/dusrb37/Anonymize-Anyone)___
 
-To inference, Checkout - `demo_anonymize_anyone.ipynb` for mode details.
+To inference, Checkout - `inference.ipynb` for mode details.
 
 
 For your dataset, change the path of the image and mask.
