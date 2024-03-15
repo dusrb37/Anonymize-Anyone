@@ -147,10 +147,10 @@ bash ./tarin_diffusion_dpo.sh
 ## ✈️ Inference
 ___[Model Checkpoint](https://huggingface.co/dusrb37/Anonymize-Anyone)___
 
-To inference, Checkout - `demo_anonymize_anyone.ipynb` for mode details.
+To inference Checkout - `demo_anonymize_anyone.ipynb` for mode details.
 
 
-To inference your dataset, change the path of the image and mask.
+For your dataset, change the path of the image and mask.
 
 <be>
    
