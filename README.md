@@ -68,9 +68,6 @@ Please set the environment by referring to the GitHub link. [FaRL](https://githu
 ```bash
 python ./segmentation/test_face_segment.py
 ```
-Check the pre-trained model in `./segmentation/FaRL_jit.pth`
-
-
 Find the output in `./segmentation/output`
 
 <be>
