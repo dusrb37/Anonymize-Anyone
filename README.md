@@ -134,7 +134,10 @@ accelerate launch ./train_anonymize_inpaint.py \
 ### 2. Train for DPO
 
 Run the shell script below for training DPO. 
-Please refer to the original [code base repository](https://github.com/SalesforceAIResearch/DiffusionDPO) and change the settings accordingly. We used [pre-trained model](https://huggingface.co/radames/sd-21-DPO-LoRA).
+Please refer to the original [code base repository](https://github.com/SalesforceAIResearch/DiffusionDPO) and change the settings accordingly. 
+
+
+We used [pretrained model](https://huggingface.co/radames/sd-21-DPO-LoRA).
 ```bash
 ./tarin_dpo_diffusion.sh
 ```
