@@ -134,6 +134,8 @@ accelerate launch ./train_anonymize_inpaint.py \
 ### 2. Train for DPO
 
 Run the shell script below for training DPO. 
+
+
 Please refer to the original [code base repository](https://github.com/SalesforceAIResearch/DiffusionDPO) and change the settings accordingly. 
 
 
@@ -147,7 +149,7 @@ bash ./tarin_diffusion_dpo.sh
 ## ✈️ Inference
 ___[Model Checkpoint](https://huggingface.co/dusrb37/Anonymize-Anyone)___
 
-To inference Checkout - `demo_anonymize_anyone.ipynb` for mode details.
+To inference, Checkout - `demo_anonymize_anyone.ipynb` for mode details.
 
 
 For your dataset, change the path of the image and mask.
