@@ -1,4 +1,4 @@
-accelerate launch train_diffusion_dpo.py \
+accelerate launch ./train_diffusion_dpo.py \
   --pretrained_model_name_or_path=stabilityai/stable-diffusion-2-1  \
   --output_dir="diffusion-dpo" \
   --mixed_precision="fp16" \
