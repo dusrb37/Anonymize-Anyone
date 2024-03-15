@@ -1,0 +1,21 @@
+accelerate launch train_diffusion_dpo.py \
+  --pretrained_model_name_or_path=stabilityai/stable-diffusion-2-1  \
+  --output_dir="diffusion-dpo" \
+  --mixed_precision="fp16" \
+  --dataset_name=yuvalkirstain/pickapic_v2 \
+  --resolution=512 \
+  --train_batch_size=8 \
+  --gradient_accumulation_steps=2 \
+  --gradient_checkpointing \
+  --use_8bit_adam \
+  --rank=8 \
+  --learning_rate=1e-5 \
+  --report_to="wandb" \
+  --lr_scheduler="constant" \
+  --lr_warmup_steps=0 \
+  --max_train_steps=10000 \
+  --checkpointing_steps=1000 \
+  --run_validation --validation_steps=50 \
+  --seed="0" \
+  --report_to="wandb" \
+  --push_to_hub
