@@ -38,7 +38,6 @@ conda create -n anonymize python=3.10.13
 conda activate anonymize
 
 git clone https://github.com/dusrb37/Anonymize-Anyone.git
-cd Anonymize-Anyone
 pip install peft
 pip install diffusers
 pip install -r requirements.txt
