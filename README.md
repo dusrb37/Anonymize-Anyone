@@ -51,12 +51,12 @@ Find the output in `./test/anonymized`
 
 ### 1. segmentation mask
 
-Please set the environment by referring to the GitHub link. [Install guide](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) , [Detectron2](https://github.com/facebookresearch/detectron2)
+Please set the environment by referring to the GitHub link. [FaRL](https://github.com/FacePerceiver/FaRL?tab=readme-ov-file) , [facer](https://github.com/FacePerceiver/facer)
 
 ```bash
 python ./segmentation/test_face_segment.py
 ```
-Check the pre-trained model in `./segmentation/model/Retina_model.pth`
+Check the pre-trained model in `./segmentation/FaRL_jit.pth`
 
 
 Find the output in `./segmentation/output`
