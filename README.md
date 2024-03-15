@@ -47,9 +47,21 @@ Find the output in `./test/anonymized`
 
 <be>
 
-## ⬇️: Get the Source Mask
+## ⬇️: Get the Segmentation Mask
 
-### 1. segmentation mask
+### 1. Pre-trained model
+
+1. Download the pre-trained models from [Google Drive](https://drive.google.com/file/d/1lOCC3lSY_pq8v60qtfnSVzNiSirtZgsb/view?usp=drive_link).
+
+2. Put the models under `pre-trained` as follows:
+    ```
+    Anonymize-Anyone
+    └── segmentation
+        └── FaRL_jit.pt
+    ```
+   
+
+### 2. Segmentation mask
 
 Please set the environment by referring to the GitHub link. [FaRL](https://github.com/FacePerceiver/FaRL?tab=readme-ov-file) , [facer](https://github.com/FacePerceiver/facer)
 
@@ -60,12 +72,6 @@ Check the pre-trained model in `./segmentation/FaRL_jit.pth`
 
 
 Find the output in `./segmentation/output`
-
-
-
-### 2. Convert to binary mask
-To convert your mask to binary mask use the notebook `./segmentation/convert_binary.ipynb`
-Find the output in `./segmentation/binary_mask`
 
 <be>
 
