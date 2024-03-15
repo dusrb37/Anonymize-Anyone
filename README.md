@@ -49,11 +49,11 @@ Find the output in `./test/anonymized`
 
 ## ⬇️: Get the Segmentation Mask
 
-### 1. Pre-trained model
+### 1. Pretrained model
 
-1. Download the pre-trained models from [Google Drive](https://drive.google.com/file/d/1lOCC3lSY_pq8v60qtfnSVzNiSirtZgsb/view?usp=drive_link).
+1. Download the pretrained models from [Google Drive](https://drive.google.com/file/d/1lOCC3lSY_pq8v60qtfnSVzNiSirtZgsb/view?usp=drive_link).
 
-2. Put the models under `pre-trained` as follows:
+2. Put the models under `pretrained` as follows:
     ```
     Anonymize-Anyone
     └── segmentation
