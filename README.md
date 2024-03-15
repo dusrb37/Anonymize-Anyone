@@ -89,7 +89,7 @@ export INSTANCE_DIR="path-to-instance-images"
 export DIFFERENCE_DIR="path-to-difference-images"
 export OUTPUT_DIR="path-to-save-model"
 
-accelerate launch train_anonymize_inpaint.py \
+accelerate launch ./train_anonymize_inpaint.py \
   --pretrained_model_name_or_path=$MODEL_NAME  \
   --train_text_encoder \
   --instance_data_dir=$INSTANCE_DIR \
