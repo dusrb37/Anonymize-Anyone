@@ -143,7 +143,7 @@ bash ./tarin_diffusion_dpo.sh
 <be>
 
 ## ✈️ Inference
-___[Model Checkpoint](https://huggingface.co/dusrb37/Anonymize-Anyone)___
+___Model Checkpoint is [here](https://huggingface.co/dusrb37/Anonymize-Anyone)___
 
 To inference, Checkout - `inference.ipynb` for mode details.
 
