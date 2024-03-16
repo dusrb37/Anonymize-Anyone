@@ -45,7 +45,7 @@ def write_bhw(image: torch.Tensor, path: str):
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-image = facer.hwc2bchw(facer.read_hwc('/segmentation/img/0.png')).to(device=device)  # image: 1 x 3 x h x w
+image = facer.hwc2bchw(facer.read_hwc('./segmentation/img/0.png')).to(device=device)  # image: 1 x 3 x h x w
 face_detector = facer.face_detector('retinaface/mobilenet', device=device)
 
 with torch.inference_mode():
