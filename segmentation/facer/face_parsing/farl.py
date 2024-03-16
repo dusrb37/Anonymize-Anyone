@@ -66,7 +66,7 @@ class FaRLFaceParser(FaceParser):
         if model_path is None:
             model_path = pretrain_settings[conf_name]['url']
         self.conf_name = conf_name
-        self.net = torch.jit.load("FaRL_jit.pt", map_location=None)
+        self.net = torch.jit.load("./segmentation/FaRL_jit.pt", map_location=None)
         self.eval()
 
     def forward(self, images: torch.Tensor, data: Dict[str, Any]):
