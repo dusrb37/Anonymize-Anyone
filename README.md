@@ -113,11 +113,11 @@ accelerate launch ./train_anonymize_inpaint.py \
 
 #### **General**
 
-- `--pretrained_model_name_or_path` what model to train/initalize from
-- `--INSTANCE_DIR` path for dataset that you want to train
-- `--DIFFERENCE_DIR` path-for difference images
-- `--output_dir` where to save/log to
-- `--instance_prompt` prompt that you want to train
+- `--pretrained_model_name_or_path` What model to train/initalize from
+- `--INSTANCE_DIR` Path for dataset that you want to train
+- `--DIFFERENCE_DIR` Path-for difference images
+- `--output_dir` Where to save/log to
+- `--instance_prompt` Prompt that you want to train
 - `--train_text_encoder` Fine-tuning `text_encoder` with `unet` can give much better results, especially for faces
 
 #### **Loss**
@@ -125,7 +125,7 @@ accelerate launch ./train_anonymize_inpaint.py \
 - `--ffel_weight` Focused Feature Enhancement Loss
 - `--threshold` Parameter for critical feature mask, It is recommended to experiment by adjusting it up or down from 0.5
 - `--with_difference_loss` Difference Loss
-- `--difference_prompt` prompt that you want to preserve
+- `--difference_prompt` Prompt that you want to preserve
 - `--num_difference_images` Number of generating images for difference prompt, 200-300 worked well for our cases
 
 
