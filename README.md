@@ -113,12 +113,12 @@ accelerate launch ./train_anonymize_inpaint.py \
 
 #### **General**
 
-- `--pretrained_model_name_or_path` What model to train/initalize from
-- `--INSTANCE_DIR` Path for dataset that you want to train
-- `--DIFFERENCE_DIR` Path-for difference images
-- `--output_dir` Where to save/log to
-- `--instance_prompt` Prompt that you want to train
-- `--train_text_encoder` Fine-tuning `text_encoder` with `unet` can give much better results, especially for faces
+- `--pretrained_model_name_or_path` what model to train/initalize from
+- `--INSTANCE_DIR` path for dataset that you want to train
+- `--DIFFERENCE_DIR` path-for difference images
+- `--output_dir` where to save/log to
+- `--instance_prompt` prompt that you want to train
+- `--train_text_encoder` fine-tuning `text_encoder` with `unet` can give much better results, especially for faces
 
 #### **Loss**
 
